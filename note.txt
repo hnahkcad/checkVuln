@@ -13,3 +13,21 @@ while ($true) { SetOpLock.exe "C:\Windows\SysWOW64\OneCoreCommonProxyStub.dll" x
 
 https://www.softmaker.net/down/freeoffice2021.msi
 https://download.pdf24.org/pdf24-creator-11.14.0.msi
+
+cat /etc/ssh/sshd_config
+crontab -l
+ls -al /etc/cron*
+grep -R "ssh.*-R" /etc/cron*
+grep -E "(ssh.*-L|ssh.*-R|ssh.*-D)" /home/*/.bash_history
+ss -tpn | awk '{print $5}' | awk -F: '{print $1}' | sort | uniq -c | sort -nr | head
+find /tmp /var/tmp /dev/shm -type f -executable 2>/dev/null
+cat ~/.bash_history
+grep -E "(nmap|masscan|sqlmap|dirb|nikto)" ~/.bash_history
+grep "Accepted" /var/log/auth.log
+grep "Failed" /var/log/auth.log
+ps aux | grep -E "ssh.*(-R|-L|-D)"
+ps aux | grep -E "bash -i|nc -e|python -c"
+crontab -l
+ls -alh /etc/cron*
+grep -R "nmap" /etc/cron*
+grep -R "python" /etc/systemd/system
